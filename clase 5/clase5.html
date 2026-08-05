@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> página de pruebita:D</title>
+        </head>
+    
+        <body>
+            <form>
+                <fieldset> 
+                    <legend> Selecciona una modalidad</legend>
+                    <label for presencial>
+                        <input type="radio" value="presencial" name="modalidad">
+                        Presencial
+                        <input type="radio" value="presencial" name="modalidad">
+                        Virtual
+
+                    </label>
+                    
+                </fieldset>
+                <label for="turno">Turno</label>
+                    <select name="turno" id="turno">
+                        <option value="A">turno A</option>
+                        <option value="B">turno A</option>
+                        <option value="C">turno A</option>
+                    </select>
+                <label for="comentario">comentario</label>
+                <textarea name="comentario" id="comentario"></textarea>
+
+                <button> Vista previa</button>
+                <button type="button">
+
+                </button>
+                <button type="reset"> limpiar </button>
+                <button type="submit"> guardar </button>
+                <form action="/guardar" method="POST"></form>
+                <label for="nombre"> Nombre</label>
+                <input name="nombre" id="nombre">
+                
+            </form>
+
+        </body>
+</html>
