@@ -1,0 +1,14 @@
+.parrafo{
+    color:blueviolet;
+}
+.verde {
+    background-color: greenyellow;
+}
+
+form label {
+    color: skyblue;
+}
+
+input[required] {
+    background-color: greenyellow;
+}
