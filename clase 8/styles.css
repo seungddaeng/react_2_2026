@@ -1,0 +1,16 @@
+.message {
+    color: white;
+    background-color: #123456;
+    font-family: system-ui, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    height: 100px;
+}
+
+.message:hover {
+    background-color: #7890AB;
+}
+
+.input:focus {
+    background-color: gray;
+}
