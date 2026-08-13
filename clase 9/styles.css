@@ -1,0 +1,61 @@
+.memoria td {
+  border: 2px solid #145DA0;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-align: center;
+  font-size: 2rem;
+  color: transparent;
+}
+.memoria td:hover {
+    color: gray
+}
+
+.pista {
+    width: 24rem;
+    border: 2px solid #243447;
+}
+
+.corredor {
+    border-bottom: 1px dashed #B8C2CC;
+    padding: 0.5rem;
+    background-color: #F4F7FB;
+    height: 3rem;
+    font-size: 1.5rem;
+}
+
+.corredor:hover {
+    background-color: #E1E8ED;
+    padding-left: 10rem;
+}
+
+.normal{
+    width: 12rem;
+    padding: 1rem;
+    background-color: gray;
+    border: 2px solid black;
+    position: static;
+}
+
+.referencia {
+    border: 2px solid black;
+    padding: 1rem;
+    left: 2rem;
+    top:5rem;
+    position: relative;
+
+}
+
+.tarjeta {
+    width: 16rem;
+    padding: 1rem;
+    background-color: lightblue;
+    border: 1px solid blue; 
+}
+
+.etiqueta {
+    background-color: orange;
+    padding: 0.5rem;
+    top: 0.5 rem;
+    left: 0.5 rem;
+    position: absolute;
+}
