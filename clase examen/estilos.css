@@ -1,0 +1,74 @@
+body {
+    background-color: rgb(229, 234, 221);
+    padding: 2rem;
+}
+
+.boton {
+    color: #243447;
+    text-decoration: none;
+}
+
+.etiqueta {
+    display: inline-block;
+    background-color: #82aadb;
+    color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+}
+
+
+.pista {
+    background-color: rgb(178, 232, 229);
+    border: 2px solid #243447;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    position: relative;
+}
+
+.carril {
+    height: 3.5rem;
+}
+
+.meta {
+    position: absolute;
+    top: 0;
+    right: 1.2rem;
+    height: 100%;
+    border-right: 3px dashed #145DA0;
+}
+
+.corredor {
+    position: relative;
+    left: 0;
+    font-size: 2.2rem;
+}
+
+.tortuga {
+    transition: left 2s;
+}
+
+.gato {
+    transition: left 2s;
+}
+
+.cohete {
+    transition: left 2s;
+}
+
+.boton:hover .etiqueta {
+    background-color: greenyellow;
+}
+
+.boton:hover .tortuga {
+    left: 93%;
+}
+
+.boton:hover .gato {
+    left: 93%;
+}
+
+.boton:hover .cohete {
+    left: 93%;
+}
