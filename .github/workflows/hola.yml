@@ -1,6 +1,7 @@
 name: Holiii jijiji
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:
