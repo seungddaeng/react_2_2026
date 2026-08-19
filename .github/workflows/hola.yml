@@ -10,7 +10,9 @@ jobs:
     steps:
       - name: Saludar
         run: echo "hola mundo"
+
       - name: Descargar código
-        run: actions/checkout@v4
-      - name: en qué carpeta estoy
+        uses: actions/checkout@v4
+
+      - name: En qué carpeta estoy
         run: pwd
