@@ -16,3 +16,6 @@ jobs:
 
       - name: En qué carpeta estoy
         run: pwd
+
+      - name: listado de archivos
+        run: ls -la
