@@ -17,11 +17,16 @@ jobs:
       - name: En qué carpeta estoy
         run: pwd
 
-      - name: listado de archivos
+      - name: Listado de archivos
         run: ls -la
-      
-      - name: instalar node
-        run: actions/setup@v4
 
-      - name: verificar node
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verificar Node
         run: node --version
+
+      - name: Verificar npm
+        run: npm --version
