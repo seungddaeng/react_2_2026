@@ -1,9 +1,11 @@
 name: Holiii jijiji
+
 on:
   workflow_dispatch:
+
 jobs:
   hola:
-    run-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      name: saludar
-      run: echo "hola mundo"
+      - name: Saludar
+        run: echo "hola mundo"
