@@ -30,3 +30,9 @@ jobs:
 
       - name: Verificar npm
         run: npm --version
+
+      - name: Inicializar proyecto
+        run: npm init -y
+
+      - name: Instalar ESLint
+        run: npm install --save-dev eslint @eslint/js globals
