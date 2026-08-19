@@ -19,3 +19,9 @@ jobs:
 
       - name: listado de archivos
         run: ls -la
+      
+      - name: instalar node
+        run: actions/setup@v4
+
+      - name: verificar node
+        run: node --version
