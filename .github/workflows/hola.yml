@@ -7,6 +7,7 @@ on:
 jobs:
   hola:
     runs-on: ubuntu-latest
+
     steps:
       - name: Saludar
         run: echo "hola mundo"
@@ -31,8 +32,8 @@ jobs:
       - name: Verificar npm
         run: npm --version
 
-      - name: Inicializar proyecto
-        run: npm init -y
+      - name: Instalar dependencias
+        run: npm ci
 
-      - name: Instalar ESLint
-        run: npm install --save-dev eslint @eslint/js globals
+      - name: Ejecutar ESLint
+        run: npm run check:js
