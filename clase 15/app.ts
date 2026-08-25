@@ -24,3 +24,4 @@ class Celda {
         this.valor = valor;
     }
 }
+export {};
