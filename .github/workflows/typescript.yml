@@ -1,0 +1,33 @@
+name: Verificar TypeScript
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  typescript:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verificar Node
+        run: node --version
+
+      - name: Verificar npm
+        run: npm --version
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Instalar typescript
+        run: npm install typescript --save-dev
+
+      - name: Verificar TypeScript
+        run: npx tsc --noEmit

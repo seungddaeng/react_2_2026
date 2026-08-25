@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="styles_minesweeper.css">
+</head>
+<body>
+
+<h1>neo minesweeper</h1>
+
+<table id="tablero">
+  <tr>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+    <td>&#128163;</td>
+  </tr>
+  <tr>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+  </tr>
+  <tr>
+    <td>&#128512;</td>
+    <td>&#128163;</td>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+  </tr>
+  <tr>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+    <td>&#128512;</td>
+  </tr>
+</table>
+
+<script>
+const tabla = document.getElementById("tablero");
+const celdas = tabla.getElementsByTagName("td");
+
+for (let i = 0; i < celdas.length; i++) {
+  celdas[i].onclick = function () {
+    clickCelda(this);
+  };
+}
+
+function clickCelda(celda) {
+  const texto = celda.textContent.trim();
+
+  if (texto === "😀") {
+    // si está la carita solo se muestra u momentoo
+    celda.style.color = "black";
+    setTimeout(function () {
+      celda.style.color = "transparent";
+    }, 1000);
+  }
+
+  if (texto === "💣") {
+    // muetra la bomab y lo de alrededor
+    celda.style.color = "black";
+    revelarVecinos(celda);
+  }
+}
+
+function revelarVecinos(celda) {
+  const filaIndex = celda.parentElement.rowIndex;
+  const colIndex = celda.cellIndex;
+
+  for (let f = filaIndex - 1; f <= filaIndex + 1; f++) {
+    for (let c = colIndex - 1; c <= colIndex + 1; c++) {
+      if (tabla.rows[f] && tabla.rows[f].cells[c]) {
+        const vecino = tabla.rows[f].cells[c];
+        vecino.textContent = "❌";
+        vecino.style.color = "black";
+      }
+    }
+  }
+}
+</script>
+
+</body>
+</html>
