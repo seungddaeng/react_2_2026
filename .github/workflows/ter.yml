@@ -1,0 +1,40 @@
+name: Ter
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: "clase 17/tres-en-raya"
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: En qué carpeta estoy
+        run: pwd
+
+      - name: Listado de archivos
+        run: ls -la
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Verificar Node
+        run: node --version
+
+      - name: Verificar npm
+        run: npm --version
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Build con Vite
+        run: npm run build
