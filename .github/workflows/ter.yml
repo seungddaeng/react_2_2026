@@ -38,3 +38,9 @@ jobs:
 
       - name: Build con Vite
         run: npm run build
+
+      - name: Guardar zip
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-web
+          path: "clase 17/tres-en-raya/dist"
