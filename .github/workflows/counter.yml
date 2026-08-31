@@ -1,0 +1,48 @@
+name : Publish App
+
+on:
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+permissions:
+    id-token: write
+    contents: read
+    pages: write
+
+jobs:
+    hola:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: descargar codigo
+              uses: actions/checkout@v3
+            - name: instalar node
+              uses: actions/setup-node@v3
+
+            - name: node version
+              run: node --version
+
+            - name: verify npm
+              run: npm --version
+
+            - name: Clean install
+              working-directory: ./clase18/contador
+              run: npm ci
+
+            - name: Where am I
+              working-directory: ./clase18/contador
+              run: pwd
+
+            - name: Building
+              working-directory: ./clase18/contador
+              run: npx vite build
+            - name: configure github pages
+              uses: actions/configure-pages@v5
+
+            - name: uploading dist
+              uses: actions/upload-pages-artifact@v4
+              with:
+                path: ./clase18/contador/dist
+
+            - name: publish
+              uses: actions/deploy-pages@v4
