@@ -1,4 +1,4 @@
-export default function EjemploLlaves () {
+export default function EjemploLlave () {
     const sumar = (a:number, b:number):number => {
         return a + b;
     }
