@@ -26,15 +26,15 @@ jobs:
               run: npm --version
 
             - name: Clean install
-              working-directory: ./clase18/contador
+              working-directory: ./clase 18/contador
               run: npm ci
 
             - name: Where am I
-              working-directory: ./clase18/contador
+              working-directory: ./clase 18/contador
               run: pwd
 
             - name: Building
-              working-directory: ./clase18/contador
+              working-directory: ./clase 18/contador
               run: npx vite build
             - name: configure github pages
               uses: actions/configure-pages@v5
@@ -42,7 +42,7 @@ jobs:
             - name: uploading dist
               uses: actions/upload-pages-artifact@v4
               with:
-                path: ./clase18/contador/dist
+                path: ./clase 18/contador/dist
 
             - name: publish
               uses: actions/deploy-pages@v4
