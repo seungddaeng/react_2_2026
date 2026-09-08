@@ -1,0 +1,10 @@
+.arma {
+  width: 25rem;
+  height: 5rem;
+  background-color: greenyellow;
+
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
