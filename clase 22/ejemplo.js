@@ -11,7 +11,8 @@ const temporizador= setTimeout(()=>{
 clearTimeout(temporizador);
 console.log("cancele el temporizador")
 
-let segundos = 0;
+let segundos = 0;  
+
 
 const reloj = setInterval(() => {
     segundos = segundos + 1;
