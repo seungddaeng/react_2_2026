@@ -1,7 +1,7 @@
-import Saludo from "./Saludo";
+import TresEnRaya from "./TresEnRaya";
 
 function App() {
-  return <Saludo />;
+  return <TresEnRaya />;
 }
 
 export default App;

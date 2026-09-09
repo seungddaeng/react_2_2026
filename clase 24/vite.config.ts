@@ -6,6 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/saludo": "http://localhost:3000",
+      "/api": "http://localhost:3000",
     },
   },
 });
